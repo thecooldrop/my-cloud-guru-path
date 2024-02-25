@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  catpics:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "catsareawesome123-53bln5"  
+  dogpics:
+    Type: AWS::S3::Bucket
