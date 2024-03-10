@@ -21,7 +21,7 @@ variable "private_key_file_permissions" {
   default = "600"
   description = "Permissions to assign to file containing the private key. Permissions should be represented as octal Linux permissions such as 600 or 777"
   validation {
-    condition = can(regex("^[0-7][0-7][0-7]$"))
+    condition = can(regex("^[0-7][0-7][0-7]$", var.private_key_file_permissions))
     error_message = "The private key file permissions have to consist of three numerical characters between 0 and 7. Valid example 333, invalid example 1234 and 999"
   }
 }
